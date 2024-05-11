@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from "next/link";
 
 function Page() {
     const [formData, setFormData] = useState({});
     const [loading, setLoading] = useState(false);
+
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         setFormData({
@@ -18,7 +20,7 @@ function Page() {
         e.preventDefault();
         try {
             setLoading(true);
-            const res = await fetch("/api/v1/signup", {
+            const res = await fetch("http://localhost:8001/signin", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -32,6 +34,7 @@ function Page() {
                 return;
             }
             console.log(data);
+            localStorage.setItem('token',data.token)
             // Handle response here
         } catch (error) {
             setLoading(false)
@@ -54,14 +57,14 @@ function Page() {
                         </h1>
                         <form className="space-y-4 md:space-y-6" action="#" onSubmit={handleSubmit}>
                             <div>
-                                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                     Username
                                 </label>
                                 <input
                                     onChange={handleChange}
-                                    type="email"
-                                    name="email"
-                                    id="email"
+                                    type="text"
+                                    name="username"
+                                    id="username"
                                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 mb-4 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Username"
                                 />
@@ -114,12 +117,12 @@ function Page() {
                             </button>
                             <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                                 Don’t have an account yet?{" "}
-                                <a
-                                    href="#"
+                                <Link
+                                    href="/signup"
                                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                                 >
                                     Sign up
-                                </a>
+                                </Link>
                             </p>
                         </form>
                     </div>
