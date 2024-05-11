@@ -1,12 +1,32 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useState } from 'react'
 import Image from "next/image";
 import Head from "next/head";
+import { getTrainingDataByID } from '../api/dasboard';
 
 
 function page() {
+  const [AI, setAI] = useState()
+  const token= localStorage.getItem('token')
+  if(!token){
+    return (<div>Please Login to view</div>);
+  }
+
+  const valueAi = async () => {
+    if (token) {
+      const data:any = await getTrainingDataByID(token);
+      setAI(data);
+    }
+  };
+
+  useEffect(() => {
+    valueAi();
+  }, [token]); 
+
+  console.log(AI)
   return (
    <>
-    
     <div className="flex flex-col h-screen bg-gray-100">
       <Head>
         <title>AI Bot Dashboard</title>
@@ -197,104 +217,6 @@ function page() {
                 {/* data-1 */}
                 <tr className="border-b border-gray-200 hover:bg-gray-100">
                   <td className="py-3 px-6 text-left">inproto</td>
-                  <td className="py-3 px-6 text-left">
-                    <div className="flex flex-wrap">
-                      <span className="break-all">
-                      663bc8e59f582343ef66489e
-                      </span>
-                    </div>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                    2023-04-29T05:57:16.186Z
-                  </td>
-                  <td className="py-3 px-6 text-center">
-                    <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
-                      Active
-                    </span>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                  <div className="flex flex-wrap">
-                      <span className="break-all">
-                      "https://deployer-output.s3.ap-south-1.amazonaws.com/uploads/Resume.txt",
-                      </span>
-                    </div>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                  <div className="flex flex-wrap">
-                      <span className="break-all">
-                      "https://deployer-output.s3.ap-south-1.amazonaws.com/embedding/embeded-Resume.txt",
-                      </span>
-                    </div>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                  <div className="flex flex-wrap">
-                      <span className="break-all">
-                      $2b$10$6.Q1qiWaeMfhNGU4wA3EdOX1uU/wwTMo9W1mkMeDZ2ODk7vdlHVhO",
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-                {/* data-2 */}
-                <tr className="border-b border-gray-200 hover:bg-gray-100">
-                  <td className="py-3 px-6 text-left">inproto</td>
-                  <td className="py-3 px-6 text-left">
-                    <div className="flex flex-wrap">
-                      <span className="break-all">
-                      663bc8e59f582343ef66489e
-                      </span>
-                    </div>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                    2023-04-29T05:57:16.186Z
-                  </td>
-                  <td className="py-3 px-6 text-center">
-                    <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
-                      Active
-                    </span>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                  <div className="flex flex-wrap">
-                      <span className="break-all">
-                      "https://deployer-output.s3.ap-south-1.amazonaws.com/uploads/Resume.txt",
-                      </span>
-                    </div>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                  <div className="flex flex-wrap">
-                      <span className="break-all">
-                      "https://deployer-output.s3.ap-south-1.amazonaws.com/embedding/embeded-Resume.txt",
-                      </span>
-                    </div>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                  <div className="flex flex-wrap">
-                      <span className="break-all">
-                      $2b$10$6.Q1qiWaeMfhNGU4wA3EdOX1uU/wwTMo9W1mkMeDZ2ODk7vdlHVhO",
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-                {/* data-3 */}
-                <tr className="border-b border-gray-200 hover:bg-gray-100">
-                  <td className="py-3 px-6 text-left">inproto/raheem</td>
-                  <td className="py-3 px-6 text-left">644cdaebd51cd4b...</td>
-                  <td className="py-3 px-6 text-left">
-                    2023-04-29T11:38:07.481Z
-                  </td>
-                  <td className="py-3 px-6 text-center">
-                    <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
-                      Active
-                    </span>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
-                  </td>
-                  <td className="py-3 px-6 text-left">$2b$10$BiO...</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-100">
                   <td className="py-3 px-6 text-left">
                     <div className="flex flex-wrap">
                       <span className="break-all">
