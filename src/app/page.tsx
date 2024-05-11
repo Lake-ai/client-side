@@ -132,10 +132,10 @@ export default function Home() {
           </nav>
         </aside>
         {/* Main content */}
-        <main className="flex-1 p-10 ">
+        <main className="flex-1 p-1 ">
           {/* Top stats */}
-          <div className="flex  mb-10 ">
-            <div className="p-4 m-6 bg-white rounded shadow-md w-1/4 text-center">
+          <div className="flex  mb-4 ">
+            <div className="p-4 m-6 ml-0 bg-white rounded shadow-md w-1/4 text-center">
               <a href="#" className="mb-5 flex items-center justify-between ">
                 <span>Organisation</span>
                 <img
@@ -164,7 +164,7 @@ export default function Home() {
           </div>
           {/* <table>< */}
 
-          <div className="bg-white p-6 rounded-lg shadow-md fixed">
+          <div className="bg-white p-6 rounded-lg shadow-md fixed h-[400px] overflow-y-scroll scrollbar-hide">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold text-gray-800">
                 Trained Models
@@ -173,7 +173,7 @@ export default function Home() {
                 Add New Model
               </button>
             </div>
-
+             
             <table className="w-full table-auto">
               <thead>
                 <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
@@ -186,7 +186,9 @@ export default function Home() {
                   <th className="py-3 px-6 text-left">API</th>
                 </tr>
               </thead>
+              
               <tbody className="text-gray-600 text-sm font-light">
+                {/* data-1 */}
                 <tr className="border-b border-gray-200 hover:bg-gray-100">
                   <td className="py-3 px-6 text-left">inproto</td>
                   <td className="py-3 px-6 text-left">
@@ -226,11 +228,18 @@ export default function Home() {
                     </div>
                   </td>
                 </tr>
+                {/* data-2 */}
                 <tr className="border-b border-gray-200 hover:bg-gray-100">
-                  <td className="py-3 px-6 text-left">inproto/raheem</td>
-                  <td className="py-3 px-6 text-left">644cdaebd51cd4b...</td>
+                  <td className="py-3 px-6 text-left">inproto</td>
                   <td className="py-3 px-6 text-left">
-                    2023-04-29T11:38:07.481Z
+                    <div className="flex flex-wrap">
+                      <span className="break-all">
+                      663bc8e59f582343ef66489e
+                      </span>
+                    </div>
+                  </td>
+                  <td className="py-3 px-6 text-left">
+                    2023-04-29T05:57:16.186Z
                   </td>
                   <td className="py-3 px-6 text-center">
                     <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
@@ -238,20 +247,39 @@ export default function Home() {
                     </span>
                   </td>
                   <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
+                  <div className="flex flex-wrap">
+                      <span className="break-all">
+                      "https://deployer-output.s3.ap-south-1.amazonaws.com/uploads/Resume.txt",
+                      </span>
+                    </div>
                   </td>
                   <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
+                  <div className="flex flex-wrap">
+                      <span className="break-all">
+                      "https://deployer-output.s3.ap-south-1.amazonaws.com/embedding/embeded-Resume.txt",
+                      </span>
+                    </div>
                   </td>
-                  <td className="py-3 px-6 text-left">$2b$10$BiO...</td>
+                  <td className="py-3 px-6 text-left">
+                  <div className="flex flex-wrap">
+                      <span className="break-all">
+                      $2b$10$6.Q1qiWaeMfhNGU4wA3EdOX1uU/wwTMo9W1mkMeDZ2ODk7vdlHVhO",
+                      </span>
+                    </div>
+                  </td>
                 </tr>
+                {/* data-3 */}
                 <tr className="border-b border-gray-200 hover:bg-gray-100">
+                  <td className="py-3 px-6 text-left">inproto</td>
                   <td className="py-3 px-6 text-left">
-                    Teesside University - UK
+                    <div className="flex flex-wrap">
+                      <span className="break-all">
+                      663bc8e59f582343ef66489e
+                      </span>
+                    </div>
                   </td>
-                  <td className="py-3 px-6 text-left">644e28f3d171fa0...</td>
                   <td className="py-3 px-6 text-left">
-                    2023-04-29T11:38:08.246Z
+                    2023-04-29T05:57:16.186Z
                   </td>
                   <td className="py-3 px-6 text-center">
                     <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
@@ -259,13 +287,28 @@ export default function Home() {
                     </span>
                   </td>
                   <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
+                  <div className="flex flex-wrap">
+                      <span className="break-all">
+                      "https://deployer-output.s3.ap-south-1.amazonaws.com/uploads/Resume.txt",
+                      </span>
+                    </div>
                   </td>
                   <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
+                  <div className="flex flex-wrap">
+                      <span className="break-all">
+                      "https://deployer-output.s3.ap-south-1.amazonaws.com/embedding/embeded-Resume.txt",
+                      </span>
+                    </div>
                   </td>
-                  <td className="py-3 px-6 text-left">$2b$10$Vmm...</td>
+                  <td className="py-3 px-6 text-left">
+                  <div className="flex flex-wrap">
+                      <span className="break-all">
+                      $2b$10$6.Q1qiWaeMfhNGU4wA3EdOX1uU/wwTMo9W1mkMeDZ2ODk7vdlHVhO",
+                      </span>
+                    </div>
+                  </td>
                 </tr>
+                
               </tbody>
             </table>
           </div>
