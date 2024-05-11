@@ -4,12 +4,14 @@ interface UserState {
     currentUser: any | null;
     error: string | null;
     loading: boolean;
+    url : string
 }
 
 const initialState: UserState = {
     currentUser: null,
     error: null,
-    loading: false
+    loading: false,
+    url : ""
 };
 
 const userSlice = createSlice({
@@ -41,6 +43,10 @@ const userSlice = createSlice({
         logoutFailure: (state, action: PayloadAction<string>) => {
             state.error = action.payload;
             state.loading = false;
+        },
+        setUrl : (state,action:PayloadAction<string>) =>{
+            state.url = action.payload;
+
         }
     }
 });
@@ -48,7 +54,8 @@ const userSlice = createSlice({
 export const {
     signInStart, signInSuccess, signInFailure,
    
-    logoutStart, logoutSuccess, logoutFailure
+    logoutStart, logoutSuccess, logoutFailure,
+    setUrl
 } = userSlice.actions;
 
 export default userSlice.reducer;

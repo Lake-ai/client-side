@@ -164,11 +164,8 @@ export default function Home() {
           </div>
           {/* <table>< */}
 
-<<<<<<< HEAD
           <div className="bg-white p-6 rounded-lg shadow-md overflow-y-scroll ">
-=======
           <div className="bg-white p-6 rounded-lg shadow-md fixed h-[400px] overflow-y-scroll scrollbar-hide">
->>>>>>> ffa53f14680114a80a04635601b1758226111313
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold text-gray-800">
                 Trained Models
@@ -177,13 +174,10 @@ export default function Home() {
                 Add New Model
               </button>
             </div>
-<<<<<<< HEAD
 
             <table className="w-full table-auto ">
-=======
              
             <table className="w-full table-auto">
->>>>>>> ffa53f14680114a80a04635601b1758226111313
               <thead>
                 <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                   <th className="py-3 px-6 text-left">Company Name</th>
