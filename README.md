@@ -47,7 +47,7 @@ Our team is developing a SaaS platform that enables users to integrate custom ch
 
 1. **Upload Configuration File**: Users start by uploading a configuration file (e.g., JSON, YAML) specifying the chatbot's settings, including conversation flow, responses, and design preferences. This step customizes the chatbot to suit specific needs.
 
-2. **Integration with OpenAI API**: Upon uploading the configuration file, our platform integrates with OpenAI's API to generate responses for the chatbot. The API processes user inputs and generates contextually relevant responses based on the provided configuration.
+2. **Integration with OpenAI API/Gemini API**: Upon uploading the configuration file, our platform integrates with OpenAI's API/Gemini's API to generate responses for the chatbot. The API processes user inputs and generates contextually relevant responses based on the provided configuration.
 
 3. **Use of CDN and API Endpoint**: After API integration, users receive a Content Delivery Network (CDN) link and an API endpoint. These resources enable seamless embedding of the chatbot into applications within minutes.
 
