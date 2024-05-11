@@ -164,7 +164,7 @@ export default function Home() {
           </div>
           {/* <table>< */}
 
-          <div className="bg-white p-6 rounded-lg shadow-md fixed">
+          <div className="bg-white p-6 rounded-lg shadow-md overflow-y-scroll ">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold text-gray-800">
                 Trained Models
@@ -174,7 +174,7 @@ export default function Home() {
               </button>
             </div>
 
-            <table className="w-full table-auto">
+            <table className="w-full table-auto ">
               <thead>
                 <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                   <th className="py-3 px-6 text-left">Company Name</th>
@@ -225,6 +225,25 @@ export default function Home() {
                       </span>
                     </div>
                   </td>
+                </tr>
+                <tr className="border-b border-gray-200 hover:bg-gray-100">
+                  <td className="py-3 px-6 text-left">inproto/raheem</td>
+                  <td className="py-3 px-6 text-left">644cdaebd51cd4b...</td>
+                  <td className="py-3 px-6 text-left">
+                    2023-04-29T11:38:07.481Z
+                  </td>
+                  <td className="py-3 px-6 text-center">
+                    <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
+                      Active
+                    </span>
+                  </td>
+                  <td className="py-3 px-6 text-left">
+                    https://ai-chatbot-k...
+                  </td>
+                  <td className="py-3 px-6 text-left">
+                    https://ai-chatbot-k...
+                  </td>
+                  <td className="py-3 px-6 text-left">$2b$10$BiO...</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-100">
                   <td className="py-3 px-6 text-left">inproto/raheem</td>
