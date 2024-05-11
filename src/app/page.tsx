@@ -173,7 +173,7 @@ export default function Home() {
                 Add New Model
               </button>
             </div>
-
+           
             <table className="w-full table-auto">
               <thead>
                 <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
@@ -227,10 +227,16 @@ export default function Home() {
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-100">
-                  <td className="py-3 px-6 text-left">inproto/raheem</td>
-                  <td className="py-3 px-6 text-left">644cdaebd51cd4b...</td>
+                  <td className="py-3 px-6 text-left">inproto</td>
                   <td className="py-3 px-6 text-left">
-                    2023-04-29T11:38:07.481Z
+                    <div className="flex flex-wrap">
+                      <span className="break-all">
+                      663bc8e59f582343ef66489e
+                      </span>
+                    </div>
+                  </td>
+                  <td className="py-3 px-6 text-left">
+                    2023-04-29T05:57:16.186Z
                   </td>
                   <td className="py-3 px-6 text-center">
                     <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
@@ -238,34 +244,28 @@ export default function Home() {
                     </span>
                   </td>
                   <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
+                  <div className="flex flex-wrap">
+                      <span className="break-all">
+                      "https://deployer-output.s3.ap-south-1.amazonaws.com/uploads/Resume.txt",
+                      </span>
+                    </div>
                   </td>
                   <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
+                  <div className="flex flex-wrap">
+                      <span className="break-all">
+                      "https://deployer-output.s3.ap-south-1.amazonaws.com/embedding/embeded-Resume.txt",
+                      </span>
+                    </div>
                   </td>
-                  <td className="py-3 px-6 text-left">$2b$10$BiO...</td>
+                  <td className="py-3 px-6 text-left">
+                  <div className="flex flex-wrap">
+                      <span className="break-all">
+                      $2b$10$6.Q1qiWaeMfhNGU4wA3EdOX1uU/wwTMo9W1mkMeDZ2ODk7vdlHVhO",
+                      </span>
+                    </div>
+                  </td>
                 </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-100">
-                  <td className="py-3 px-6 text-left">
-                    Teesside University - UK
-                  </td>
-                  <td className="py-3 px-6 text-left">644e28f3d171fa0...</td>
-                  <td className="py-3 px-6 text-left">
-                    2023-04-29T11:38:08.246Z
-                  </td>
-                  <td className="py-3 px-6 text-center">
-                    <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
-                      Active
-                    </span>
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
-                  </td>
-                  <td className="py-3 px-6 text-left">
-                    https://ai-chatbot-k...
-                  </td>
-                  <td className="py-3 px-6 text-left">$2b$10$Vmm...</td>
-                </tr>
+                
               </tbody>
             </table>
           </div>
