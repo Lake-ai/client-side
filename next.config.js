@@ -1,5 +1,8 @@
-module.exports = {
-    images: {
-      domains: ['th.bing.com'],
-    },
-  };
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    reactStrictMode: false,
+    distDir: 'build',
+    output: 'export'
+}
+
+module.exports = nextConfig
