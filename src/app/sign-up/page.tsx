@@ -11,10 +11,10 @@ import Link from "next/link";
 const Page = () => {
   const router = useRouter();
   const [isLoading, setisLoading] = useState(false);
-  const [User, setUser] = useState({
-    UserName: "",
-    UserEmail:"",
-    Password:""
+  const [User, setUser] = useState<any>({
+    username: "",
+    email:"",
+    password:""
   });
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUser({
@@ -67,10 +67,10 @@ const Page = () => {
           >
             <div className="text-gray-950 flex justify-center text-2xl">Sign Up</div>
             <div className="mb-4">
-              <label className="block text-gray-600">UserName</label>
+              <label className="block text-gray-600">username</label>
               <input
                 type="text"
-                name="UserName"
+                name="username"
                 required
                 minLength={6}
                 onChange={handleChange}
@@ -81,17 +81,17 @@ const Page = () => {
               <label className="block text-gray-600">Email</label>
               <input
                 type="email"
-                name="UserEmail"
+                name="email"
                 required
                 onChange={handleChange}
                 className="mt-1 w-full px-4 py-2 rounded-md border bg-opacity-50 bg-pink-50 border-gray-300 focus:outline-none focus:border-pink-500"
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-600">Password</label>
+              <label className="block text-gray-600">password</label>
               <input
                 type="password"
-                name="Password"
+                name="password"
                 required
                 minLength={6}
                 maxLength={12}

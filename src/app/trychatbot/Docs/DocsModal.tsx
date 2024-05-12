@@ -63,13 +63,13 @@ const DocsModal: React.FC<DocsModalProps> = ({apiKey, initialMessage, chatbotTit
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/interfaces-cdn/styles.css">
     <title>Chat Bot</title>
 </head>
 <body>
     <div id="chatbot"></div>
 </body>
-<script src="https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/interfaces-cdn/script.js"></script>
 <script>
 chatbot.setChatBotConfiguration({
     apiKey: "${apiKey}",
@@ -85,10 +85,10 @@ chatbot.setChatBotConfiguration({
 
 <!-- 
 Style Sheet CDN
-https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/styles.css
+https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/interfaces-cdn/styles.css
 
 JavaScript CDN
-https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/script.js -->
+https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/interfaces-cdn/script.js -->
 
                 `);
                 break;
