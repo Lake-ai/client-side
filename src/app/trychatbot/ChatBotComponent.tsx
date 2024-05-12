@@ -8,6 +8,7 @@ const url = serverUrl({Production: true})
 interface ChatBotProps {
   initialMessage?: string;
   chatbotTitle?: string;
+  LLM:string;
   brandImage?: string;
   apiKey: string;
   switchAPI?: boolean;
@@ -18,6 +19,7 @@ interface ChatBotProps {
 const ChatBotComponent: React.FC<ChatBotProps> = ({
   initialMessage = "Hello! How Can I Assist You ?",
   chatbotTitle = "Chat bot",
+  LLM,
   brandImage = "https://www.kindpng.com/picc/m/179-1798038_chatbots-builder-pricing-crozdesk-free-chatbot-hd-png.png",
   apiKey,
   switchAPI = false,
@@ -44,7 +46,6 @@ const ChatBotComponent: React.FC<ChatBotProps> = ({
       setMessages([{ type: "bot", text: initialMessage }]);
     }
   }, [initialMessage]);
-
   useEffect(() => {
     if (isOpen) {
       inputRef.current?.focus();
@@ -70,6 +71,7 @@ const ChatBotComponent: React.FC<ChatBotProps> = ({
 
       const payloadBody = {
         prompt: userQuestion,
+        llm:LLM
       };
 
       const response = await fetch(chatAPIUrl, {

@@ -21,7 +21,7 @@ const DocsModal: React.FC<DocsModalProps> = ({apiKey, initialMessage, chatbotTit
       
         const payloadBody = {
           prompt: userQuestion,
-          llm: ${LLM}
+          llm: "${LLM}"
         };
       
         try {
@@ -63,17 +63,18 @@ const DocsModal: React.FC<DocsModalProps> = ({apiKey, initialMessage, chatbotTit
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apurvjha123/Chit-Chat-Server/js-interface/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/styles.css">
     <title>Chat Bot</title>
 </head>
 <body>
     <div id="chatbot"></div>
 </body>
-<script src="https://cdn.jsdelivr.net/gh/apurvjha123/Chit-Chat-Server/js-interface/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/script.js"></script>
 <script>
 chatbot.setChatBotConfiguration({
     apiKey: "${apiKey}",
     chatbotTitle: "${chatbotTitle}",
+    LLM:"${LLM}",
     initialMessage: "${initialMessage}",
     brandImage: "${brandImage}",
     suggestions :[${suggestions.map(suggestion => `"${suggestion}"`).join(', ')}],
@@ -84,26 +85,27 @@ chatbot.setChatBotConfiguration({
 
 <!-- 
 Style Sheet CDN
-https://cdn.jsdelivr.net/gh/apurvjha123/Chit-Chat-Server/js-interface/style.css
+https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/styles.css
 
 JavaScript CDN
-https://cdn.jsdelivr.net/gh/apurvjha123/Chit-Chat-Server/js-interface/script.js -->
+https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/script.js -->
 
                 `);
                 break;
             case 'REACTJS':
                 setContent(`
 \`1. Install this Dependency:\`
-npm i chit-chat-react
+npm i lake-ai-npm
 
 \`2. Configuration & Usage:\`
 
-import ChatBot from 'chit-chat-react';
+import ChatBot from 'lake-ai-npm';
 
 export default function YourComponent() {
     return <ChatBot 
     apiKey= "${apiKey}"
     chatbotTitle= "${chatbotTitle}"
+    LLM= "${LLM}"
     initialMessage= "${initialMessage}"
     brandImage ="${brandImage}"
     suggestions :{[${suggestions.map(suggestion => `"${suggestion}"`).join(', ')}]}
@@ -122,10 +124,11 @@ pip install requests
 import requests
 
 def generate_answer(user_question):
-    chat_api_url = "https://chit-chat.tech/api/v1/QnARetrieval?key=${apiKey}"
+    chat_api_url = "http://localhost:8001/api/v0.1/QnARetrieval?key=${apiKey}"
 
     payload_body = {
         "prompt": user_question,
+        "llm":${LLM}
     }
 
     try:

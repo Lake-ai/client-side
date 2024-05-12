@@ -11,7 +11,7 @@ const Navbar = () => {
           <div className="container flex flex-wrap justify-between items-center mx-auto">
             <Link href="/dashboard" className="flex items-center">
               <span className="self-center text-xl font-semibold font-serif px-3 whitespace-nowrap text-gray-700">
-                Chit-Chat
+                Lake AI
               </span>
             </Link>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                <Link href='https://github.com/apurvjha123/chit-chat-nextjs' className="block py-2 pr-4 pl-3 text-gray-700 hover:text-sky-600  rounded md:bg-transparent md:p-0">
+                <Link href='https://github.com/Lake-ai' className="block py-2 pr-4 pl-3 text-gray-700 hover:text-sky-600  rounded md:bg-transparent md:p-0">
                     <div className="flex">
                     <BsGithub className="p-1 text-xl"/>Contribute
                     </div>

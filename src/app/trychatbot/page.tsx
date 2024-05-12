@@ -41,7 +41,7 @@ const Page: React.FC = () => {
     chatbotTitle: "Chat bot",
     LLM:"OpenAI",
     brandImage:
-      "https://www.kindpng.com/picc/m/179-1798038_chatbots-builder-pricing-crozdesk-free-chatbot-hd-png.png",
+      "https://cdn.jsdelivr.net/gh/Lake-ai/cdn-interface/chatbot.png",
     suggestions: [],
     rateLimitDuration: 5000,
   });
@@ -143,7 +143,7 @@ const Page: React.FC = () => {
                     onChange={handleLLMChange}
                   >
                     <option value="OpenAI">OpenAI</option>
-                    <option value="GPT-4">Gemini</option>
+                    <option value="Gemini">Gemini</option>
                   </select>
                 </label>
                 <label>
